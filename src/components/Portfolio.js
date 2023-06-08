@@ -55,7 +55,7 @@ const Portfolio = React.forwardRef((props, ref) => {
   };
 
   return (
-    <div className="component" ref={ref}>
+    <div className="component bg-info" ref={ref}>
       <div className="container py-5">
         <div className="m-2">
           <h1 className="fw-bold">作品集</h1>

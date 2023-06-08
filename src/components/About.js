@@ -12,8 +12,8 @@ const About = React.forwardRef((props, ref) => {
 
   return (
     <div className="component" ref={ref}>
-      <div className="container px-4 mt-5">
-        <div className="row flex-column-reverse flex-lg-row justify-content-between mt-5">
+      <div className="container px-4 mt-lg-5 mt-0">
+        <div className="row flex-column-reverse flex-lg-row justify-content-between my-4">
           <div className="col-lg-6">
             <div>
               <h1 className="fw-bold">About Me</h1>
@@ -31,7 +31,7 @@ const About = React.forwardRef((props, ref) => {
                 Bootstrap 等前端技術。此外，我還具有 Express.js、PHP 和 MySQL
                 等後端開發技能。
               </p>
-              <div className="row my-5">
+              <div className="row my-4">
                 <div className="col-lg-6">
                   <div className="mb-4">
                     <p className="fw-bold">JavaScript</p>
@@ -87,9 +87,9 @@ const About = React.forwardRef((props, ref) => {
               </div>
               <div>
                 <button
-                  className="btn btn-outline-dark rounded-1 py-2 px-4 border border-2 border-dark"
+                  className="btn btn-outline-dark py-2 px-4 border border-2 border-dark fw-bold"
                   onClick={togglePopup}>
-                  See More
+                  查看更多
                 </button>
               </div>
               {showPopup && (
@@ -202,9 +202,9 @@ const About = React.forwardRef((props, ref) => {
                             </span>
                           </h2>
 
-                          <div class="row my-4">
-                            <div class="col-12 col-sm-6 p-3">
-                              <div class="p-2 card">
+                          <div className="row my-4">
+                            <div className="col-12 col-sm-6 p-3">
+                              <div className="p-2 card">
                                 <h1
                                   className="m-4 text-primary"
                                   style={{ fontSize: '3rem' }}>
@@ -219,8 +219,8 @@ const About = React.forwardRef((props, ref) => {
                               </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 p-3">
-                              <div class="p-2 card">
+                            <div className="col-12 col-sm-6 p-3">
+                              <div className="p-2 card">
                                 <h1
                                   className="m-4 text-primary"
                                   style={{ fontSize: '3rem' }}>
@@ -234,8 +234,8 @@ const About = React.forwardRef((props, ref) => {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 p-3">
-                              <div class="p-2 card">
+                            <div className="col-12 col-sm-6 p-3">
+                              <div className="p-2 card">
                                 <h1
                                   className="m-4 text-primary"
                                   style={{ fontSize: '3rem' }}>
@@ -250,8 +250,8 @@ const About = React.forwardRef((props, ref) => {
                               </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 p-3">
-                              <div class="p-2 card">
+                            <div className="col-12 col-sm-6 p-3">
+                              <div className="p-2 card">
                                 <h1
                                   className="m-4 text-primary"
                                   style={{ fontSize: '3rem' }}>
@@ -274,10 +274,7 @@ const About = React.forwardRef((props, ref) => {
                             </span>
                           </h2>
                           <div className="border-start ps-4 ps-lg-5 my-5 position-relative">
-                            <BsBriefcase
-                              className="bg-primary text-white about-logo"
-                              style={{ clipPath: 'circle(50% at 50% 50%)' }}
-                            />
+                            <BsBriefcase className="bg-primary text-white about-logo rounded-4" />
                             <div className="pb-3 pt-2">
                               <span
                                 className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
@@ -298,10 +295,7 @@ const About = React.forwardRef((props, ref) => {
                             </p>
                           </div>
                           <div className="border-start ps-4 ps-lg-5 my-5 position-relative">
-                            <BsBriefcase
-                              className="bg-primary text-white about-logo"
-                              style={{ clipPath: 'circle(50% at 50% 50%)' }}
-                            />
+                            <BsBriefcase className="bg-primary text-white about-logo rounded-4" />
                             <div className="pb-3">
                               <span
                                 className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
@@ -329,10 +323,7 @@ const About = React.forwardRef((props, ref) => {
                             </span>
                           </h2>
                           <div className="border-start ps-4 ps-lg-5 my-5 position-relative">
-                            <BsBook
-                              className="bg-primary text-white about-logo"
-                              style={{ clipPath: 'circle(50% at 50% 50%)' }}
-                            />
+                            <BsBook className="bg-primary text-white about-logo rounded-4" />
                             <div className="pb-3">
                               <span
                                 className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
@@ -353,10 +344,7 @@ const About = React.forwardRef((props, ref) => {
                             </p>
                           </div>
                           <div className="border-start ps-4 ps-lg-5 my-5 position-relative">
-                            <BsBook
-                              className="bg-primary text-white about-logo"
-                              style={{ clipPath: 'circle(50% at 50% 50%)' }}
-                            />
+                            <BsBook className="bg-primary text-white about-logo rounded-4" />
                             <div className="pb-3">
                               <span
                                 className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
@@ -384,10 +372,11 @@ const About = React.forwardRef((props, ref) => {
               )}
             </div>
           </div>
-          <div className="col-lg-6 text-center">
+          <div className='col-lg-1'></div>
+          <div className="col-lg-4 text-center">
             <div className="container">
               <img
-                className="rounded about-img py-5 w-75"
+                className="rounded about-img py-5 w-100"
                 src={process.env.PUBLIC_URL + '/images/01.png'}
                 alt="avatar"
               />

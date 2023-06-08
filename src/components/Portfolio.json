@@ -7,8 +7,7 @@
     "date": "2022/12 - 2023/02",
     "description": "Housetune 為線上傢具電商網站，以優雅、簡約的商品為主，並提供二手專區讓會員上架或購買二手商品。",
     "technology": "React.js、Express.js、MySQL、Bootstrap",
-    "function": 
-      "個人賣場、賣場管理、Header & Footer、Google Maps API、LINE Pay API",
+    "function": "個人賣場、賣場管理、Header & Footer、Google Maps API、LINE Pay API",
     "link": "https://github.com/gsn94561266/housetune-fe",
     "video": "https://youtu.be/MCf9-OmjjJQ"
   },
@@ -43,7 +42,7 @@
     "title": "第二屆大甲媽音樂節 - 原創組",
     "date": "2020/10 - 2021/04",
     "description": "來自一個純樸小鎮的第一屆冠軍「斤咼東扣」，帶著原創作品『守候』，敲響了音樂界的大門。從小生活在這個小鎮中，長大後離開家，渴望在世界上闖出一片屬於自己的天地。儘管面對著許多艱難和挫折，始終堅定地向前邁進。相信著大甲媽永遠在背後守護著我們，為他們帶來無盡的力量。",
-    "technology": "Cubase",
+    "technology": "Cubase、drum",
     "function": "編曲、爵士鼓演奏",
     "video": "https://fb.watch/l0qjGYzHiy/"
   },

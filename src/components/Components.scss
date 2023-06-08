@@ -1,0 +1,63 @@
+.component {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // home
+  .home-avatar {
+    max-width: 300px;
+    transition: 3s linear;
+    border-radius: 60% 40% 50% 50% / 35% 45% 55% 65%;
+    animation: go 50s infinite;
+  }
+  @keyframes go {
+    0% {
+      border-radius: 60% 40% 50% 50% / 35% 45% 55% 65%;
+    }
+    25% {
+      border-radius: 45% 55% 37% 63% / 56% 36% 54% 44%;
+    }
+    50% {
+      border-radius: 59% 41% 68% 32% / 48% 52% 48% 62%;
+    }
+    75% {
+      border-radius: 50% 50% 39% 61% / 61% 69% 31% 39%;
+    }
+  }
+  .home-list li:not(:last-child) {
+    border-right: 1px solid #cccccc; /* Adjust the color and style as per your preference */
+  }
+
+  // about
+  .custom-border {
+    border-bottom: 0.16rem dashed #cccccc;
+  }
+
+  .popup {
+    z-index: 9999;
+    .popup-close {
+      top: -25px;
+    }
+    .line{
+      height: 1px;
+      width: 2.5rem;
+    }
+    .about-logo{
+      padding: 0.7rem;
+      font-size: 2.5rem;
+      position: absolute;
+      top: 0;
+      left: -1.3rem;
+    }
+  }
+  // portfolio
+  .arrow {
+    z-index: 1;
+  }
+  .hover-black:hover {
+    background-color: #222222;
+    color: white !important;
+    border-color: white !important;
+    transition: 0.5s;
+  }
+}

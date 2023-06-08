@@ -1,0 +1,29 @@
+.App {
+  nav {
+    transition: 0.5s;
+  }
+  .cursor-default {
+    cursor: default;
+  }
+  .hamburger-menu {
+    background-color: #fff;
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    left: -100%;
+    transition: 0.4s;
+    z-index: 9999;
+  }
+  .hamburger-menu.active {
+    left: 0;
+    transition: 0.4s;
+  }
+  .menu-avatar {
+    height: 50px;
+  }
+  .to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+  }
+}

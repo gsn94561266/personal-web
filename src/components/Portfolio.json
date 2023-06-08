@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "title": "Housetune 歐風家具網站",
+    "img": "/images/portfolio/housetune.png",
+    "preview": "/images/portfolio/housetune_pre.png",
+    "date": "2022/12 - 2023/02",
+    "description": "Housetune 為線上傢具電商網站，以優雅、簡約的商品為主，並提供二手專區讓會員上架或購買二手商品。",
+    "technology": "React.js、Express.js、MySQL、Bootstrap",
+    "function": 
+      "個人賣場、賣場管理、Header & Footer、Google Maps API、LINE Pay API",
+    "link": "https://github.com/gsn94561266/housetune-fe",
+    "video": "https://youtu.be/MCf9-OmjjJQ"
+  },
+  {
+    "id": 2,
+    "title": "Housetune 後台管理系統",
+    "img": "/images/portfolio/housetune_CMS.png",
+    "preview": "/images/portfolio/housetune_CMS_pre.png",
+    "date": "2022/10 - 2022/11",
+    "description": "Housetune 為線上傢具電商網站，以優雅、簡約的商品為主，並提供二手專區讓會員上架或購買二手商品。",
+    "technology": "PHP、MySQL、Bootstrap",
+    "function": "商品管理、分類管理",
+    "link": "https://github.com/gsn94561266/housetune-CMS",
+    "video": "https://youtu.be/MCf9-OmjjJQ"
+  },
+  {
+    "id": 3,
+    "img": "/images/portfolio/hollow_talk.png",
+    "preview": "/images/portfolio/hollow_talk_pre.png",
+    "title": "HollowTalk 匿名聊天室",
+    "date": "2023/05 - 2023/06",
+    "description": "HellowTalk匿名聊天室是一個讓使用者能夠匿名與全球用戶交流的平台。無論尋找新的朋友、分享心情、尋求意見或是想要瞭解其他文化。HellowTalk為使用者提供了一個匿名的環境，能夠自由地表達自己的想法和感受，而無需擔心被他人認出。無論是想傾訴壓力、分享喜悅，還是找到一個可以公開討論的平台，這裡都能滿足需求。",
+    "technology": "React.js、Bootstrap、WebSocket",
+    "function": "",
+    "link": "https://github.com/gsn94561266/HellowTalk-fe",
+    "video": "https://youtube.com/shorts/ClLt8iV3NEo?feature=share"
+  },
+  {
+    "id": 4,
+    "img": "/images/portfolio/music_festival.jpg",
+    "preview": "/images/portfolio/music_festival_pre.jpg",
+    "title": "第二屆大甲媽音樂節 - 原創組",
+    "date": "2020/10 - 2021/04",
+    "description": "來自一個純樸小鎮的第一屆冠軍「斤咼東扣」，帶著原創作品『守候』，敲響了音樂界的大門。從小生活在這個小鎮中，長大後離開家，渴望在世界上闖出一片屬於自己的天地。儘管面對著許多艱難和挫折，始終堅定地向前邁進。相信著大甲媽永遠在背後守護著我們，為他們帶來無盡的力量。",
+    "technology": "Cubase",
+    "function": "編曲、爵士鼓演奏",
+    "video": "https://fb.watch/l0qjGYzHiy/"
+  },
+  {
+    "id": 5,
+    "img": "/images/portfolio/dont_call.png",
+    "preview": "/images/portfolio/dont_call_pre.jpg",
+    "title": "Don't Call 東扣",
+    "date": "2020 - ",
+    "description": "成立於２０２０年，現任成員有主唱兼吉他手：張照、吉他手：Kakeru、鼓手：明泓儒，因緣際會下認識，在音樂上有著志同道合的想法，並決定一同走上這條夢想之路。曲風偏好為龐克、硬搖、抒情等，希望能在音樂創作中探索對於世界的理解，以及對人文的關懷，在狂放與柔美之間，唱出扣人心弦的樂章。",
+    "technology": "Cubase、Drum",
+    "function": "詞曲創作、編曲、爵士鼓演奏",
+    "link": "https://streetvoice.com/dont_call/"
+  }
+]

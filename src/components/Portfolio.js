@@ -127,16 +127,18 @@ const Portfolio = React.forwardRef((props, ref) => {
                       <div className="col-12 col-lg-7">
                         <h3 className="mb-3 fw-bold">{v.title}</h3>
                         <p>{v.description}</p>
-                        <div className="">
-                          <ReactPlayer
-                            url={v.video}
-                            controls={true}
-                            className="w-100"
-                          />
-                        </div>
+                        {v.video && (
+                          <div>
+                            <ReactPlayer
+                              url={v.video}
+                              controls={true}
+                              className="w-100"
+                            />
+                          </div>
+                        )}
                       </div>
                       <div className="col-12 col-lg-1"></div>
-                      <div className="col-12 col-lg-4">
+                      <div className="col-12 col-lg-4 mt-4 mt-lg-0">
                         <h5 className="fw-bold">技術</h5>
                         <p>{v.technology}</p>
                         <h5 className="fw-bold">負責項目</h5>

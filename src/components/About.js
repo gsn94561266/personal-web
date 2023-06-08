@@ -16,19 +16,19 @@ const About = React.forwardRef((props, ref) => {
         <div className="row flex-column-reverse flex-lg-row justify-content-between my-4">
           <div className="col-lg-6">
             <div>
-              <h1 className="fw-bold">About Me</h1>
+              <h1 className="fw-bold">關於</h1>
             </div>
             <div className="my-5">
               <h4 className="fw-bold">哈囉，我是明泓儒</h4>
               <p>
-                先前任職於音樂出版社，協助樂譜製作和錄音、編曲、混音。近日剛完成資展國際的『前端工程師養成班』進修課程，對於前端領域深深著迷！
+                我先前在一家音樂出版社工作，負責樂譜製作、錄音、編曲和混音等工作。最近完成了資展國際舉辦的『前端工程師養成班』進修課程，這讓我對前端領域深深的著迷！透過這個課程，我學習了HTML、CSS和JavaScript等前端技術，並開始進一步探索網頁開發和使用者介面設計。我現在致力於發展我的前端技能，並期待在這個領域中不斷學習和成長。
               </p>
             </div>
             <div className="my-5">
               <h4 className="fw-bold">我的技能</h4>
               <p>
                 我精通多項技術，擁有開發經驗。我熟悉 JavaScript、React.js 和
-                Bootstrap 等前端技術。此外，我還具有 Express.js、PHP 和 MySQL
+                Bootstrap 等前端技術。此外，還具有 Express.js、PHP 和 MySQL
                 等後端開發技能。
               </p>
               <div className="row my-4">
@@ -372,7 +372,7 @@ const About = React.forwardRef((props, ref) => {
               )}
             </div>
           </div>
-          <div className='col-lg-1'></div>
+          <div className="col-lg-1"></div>
           <div className="col-lg-4 text-center">
             <div className="container">
               <img

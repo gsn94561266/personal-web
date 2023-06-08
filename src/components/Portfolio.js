@@ -58,7 +58,7 @@ const Portfolio = React.forwardRef((props, ref) => {
     <div className="component bg-info" ref={ref}>
       <div className="container py-5">
         <div className="m-2">
-          <h1 className="fw-bold">作品集</h1>
+          <h1 className="fw-bold">作品</h1>
           <p className="fw-bold fs-4 text-secondary mt-4">
             探索我在不同領域的創作，通過設計和創意將想法轉化為現實。
           </p>

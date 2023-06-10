@@ -13,6 +13,7 @@ import ReactPlayer from 'react-player';
 
 const Portfolio = React.forwardRef((props, ref) => {
   const [showPopup, setShowPopup] = useState();
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const CustomPrevArrow = ({ onClick }) => (
     <div className="position-absolute top-50 start-0 translate-middle arrow">
@@ -34,6 +35,26 @@ const Portfolio = React.forwardRef((props, ref) => {
       />
     </div>
   );
+  const CustomDot = ({ index, onClick, isActive }) => (
+    <div
+      className={`bg-transparent rounded-circle position-relative border border-2 ${
+        isActive ? 'border-secondary' : 'border-dark'
+      }`}
+      style={{
+        width: '1rem',
+        height: '1rem',
+      }}
+      onClick={onClick}>
+      {isActive && (
+        <div
+          className="bg-secondary rounded-circle position-absolute top-50 start-50 translate-middle"
+          style={{
+            width: '0.5rem',
+            height: '0.5rem',
+          }}></div>
+      )}
+    </div>
+  );
   const settings = {
     dots: false,
     infinite: true,
@@ -52,6 +73,8 @@ const Portfolio = React.forwardRef((props, ref) => {
     slidesToScroll: 1,
     nextArrow: '',
     prevArrow: '',
+    beforeChange: (oldIndex, newIndex) => setActiveIndex(newIndex),
+    customPaging: (i) => <CustomDot index={i} isActive={i === activeIndex} />,
   };
 
   return (
@@ -66,12 +89,15 @@ const Portfolio = React.forwardRef((props, ref) => {
         <div className="my-5 mx-3 mx-xl-0 d-lg-block d-none">
           <Slider {...settings}>
             {data.map((v, i) => (
-              <div className="p-2" key={i}>
+              <div
+                className="p-3 overflow-hidden rounded-3"
+                key={i}>
                 <img
                   src={`${process.env.PUBLIC_URL}${v.img}`}
                   alt={v.img}
-                  className="rounded-3 w-100"
+                  className="rounded-3 w-100 slider-img"
                   role="button"
+                  data-title={v.title}
                   onClick={() => {
                     setShowPopup(v.id);
                   }}
@@ -123,16 +149,16 @@ const Portfolio = React.forwardRef((props, ref) => {
                       className="w-100"
                       role="button"
                     />
-                    <div className="row my-5">
+                    <div className="row mt-5">
                       <div className="col-12 col-lg-7">
                         <h3 className="mb-3 fw-bold">{v.title}</h3>
                         <p>{v.description}</p>
                         {v.video && (
-                          <div>
+                          <div className="ratio ratio-16x9">
                             <ReactPlayer
                               url={v.video}
                               controls={true}
-                              className="w-100"
+                              className="w-100 h-100"
                             />
                           </div>
                         )}
@@ -142,7 +168,7 @@ const Portfolio = React.forwardRef((props, ref) => {
                         <h5 className="fw-bold">技術</h5>
                         <p>{v.technology}</p>
                         <h5 className="fw-bold">負責項目</h5>
-                        <p>{v.function}</p>
+                        <p>{v.project}</p>
                         <h5 className="fw-bold">日期</h5>
                         <p>{v.date}</p>
                         {v.link && (

@@ -1,8 +1,9 @@
 .component {
   min-height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   // home
   .home-avatar {
     max-width: 300px;
@@ -38,11 +39,11 @@
     .popup-close {
       top: -25px;
     }
-    .line{
+    .line {
       height: 1px;
       width: 2.5rem;
     }
-    .about-logo{
+    .about-logo {
       padding: 0.7rem;
       font-size: 2.5rem;
       position: absolute;
@@ -54,8 +55,15 @@
   .arrow {
     z-index: 1;
   }
+
+ 
+  .slider-img:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+  }
+
   .hover-black:hover {
-    background-color: #222222;
+    background-color: #202020;
     color: white !important;
     border-color: white !important;
     transition: 0.5s;

@@ -88,8 +88,8 @@ function App() {
                   role="button"
                   className={
                     v.ref === refSelect
-                      ? 'text-dark rounded-1 bg-dark bg-opacity-10 mx-2 px-3 py-2'
-                      : 'text-dark mx-2 px-3 py-2'
+                      ? 'text-dark rounded-1 bg-dark bg-opacity-10 mx-2 px-3 py-2 fw-bold'
+                      : 'text-dark mx-2 px-3 py-2 fw-bold'
                   }
                   onClick={() => {
                     refs[v.ref].current.scrollIntoView();

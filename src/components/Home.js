@@ -42,7 +42,7 @@ const Home = React.forwardRef((props, ref) => {
           if (nextCharIndex === currentText.length) {
             setIsDeleting(true);
           }
-        }, 500);
+        }, 300);
       }
     }
 

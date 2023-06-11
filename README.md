@@ -3,7 +3,7 @@
 https://gsn94561266.github.io/personal-web
 
 ## 使用技術
-- React.Js
+- React.js
 - Bootstrap 5
 
 ## 使用套件

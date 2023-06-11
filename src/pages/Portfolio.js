@@ -46,7 +46,7 @@ const Portfolio = React.forwardRef((props, ref) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <CustomNextArrow />,
@@ -56,7 +56,7 @@ const Portfolio = React.forwardRef((props, ref) => {
   const mobileSettings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: null,
@@ -94,7 +94,7 @@ const Portfolio = React.forwardRef((props, ref) => {
         <div className="my-5 mx-3 d-lg-none d-block">
           <Slider {...mobileSettings}>
             {data.map((v, i) => (
-              <div className="mb-2 p-1" key={i}>
+              <div className="mb-3 p-1" key={i}>
                 <img
                   src={`${process.env.PUBLIC_URL}${v.img}`}
                   alt={v.title}

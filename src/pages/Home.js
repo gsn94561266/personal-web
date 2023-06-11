@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-import './Components.scss';
-
 import {
   FiFacebook,
   FiYoutube,
@@ -9,6 +6,8 @@ import {
   FiGithub,
   FiLinkedin,
 } from 'react-icons/fi';
+
+import '../styles/pages.scss';
 
 const fullTexts = ['創新網站解決方案', '客製化網站開發'];
 
@@ -21,7 +20,6 @@ const Home = React.forwardRef((props, ref) => {
     let timer;
 
     if (isDeleting) {
-      // 刪除文字
       timer = setTimeout(() => {
         setText((prevText) => prevText.slice(0, -1));
 
@@ -31,7 +29,6 @@ const Home = React.forwardRef((props, ref) => {
         }
       }, 200);
     } else {
-      // 添加文字
       const currentText = fullTexts[currentIndex];
       const nextCharIndex = text.length + 1;
 
@@ -120,7 +117,7 @@ const Home = React.forwardRef((props, ref) => {
           </div>
           <div className="mt-4">
             <a
-              href={process.env.PUBLIC_URL + '/files/Tony_CV.pdf'}
+              href={process.env.PUBLIC_URL + '/files/明泓儒_CV.pdf'}
               className="btn btn-outline-dark rounded-pill py-2 px-4 border border-2 border-dark fw-semibold"
               download>
               下載履歷

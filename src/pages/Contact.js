@@ -1,6 +1,7 @@
 import React from 'react';
-import './Components.scss';
 import { FiMail, FiPhone, FiMessageCircle } from 'react-icons/fi';
+
+import '../styles/pages.scss';
 
 const Contact = React.forwardRef((props, ref) => {
   const handleMouseMove = (e) => {
@@ -26,7 +27,7 @@ const Contact = React.forwardRef((props, ref) => {
         <div className="row row-cols-1 row-cols-lg-3 g-4 mt-2">
           <div className="col">
             <div
-              className="p-3 bg-info rounded d-flex contact-item"
+              className="p-3 bg-info rounded d-flex"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}>
               <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center contact-icon-container">
@@ -40,28 +41,28 @@ const Contact = React.forwardRef((props, ref) => {
           </div>
           <div className="col">
             <div
-              className="p-3 bg-info rounded d-flex contact-item"
+              className="p-3 bg-info rounded d-flex"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}>
               <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center contact-icon-container">
                 <FiMail className="text-white contact-icon" />
               </div>
               <div className="text-start ms-4">
-                <h4>Email</h4>
-                <p className="text-secondary">gsn94561266@gmail.com</p>
+                <h4>Gmail</h4>
+                <p className="text-secondary">gsn94561266</p>
               </div>
             </div>
           </div>
           <div className="col">
             <div
-              className="p-3 bg-info rounded d-flex contact-item"
+              className="p-3 bg-info rounded d-flex"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}>
               <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center contact-icon-container">
                 <FiMessageCircle className="text-white contact-icon" />
               </div>
               <div className="text-start ms-4">
-                <h4>Line</h4>
+                <h4>LINE</h4>
                 <p className="text-secondary">0970269853</p>
               </div>
             </div>

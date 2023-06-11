@@ -7,7 +7,7 @@
     "date": "2022/12 - 2023/02",
     "description": "Housetune 為線上傢具電商網站，以優雅、簡約的商品為主，並提供二手專區讓會員上架或購買二手商品。",
     "technology": "React.js、Express.js、MySQL、Bootstrap",
-    "project": "個人賣場、賣場管理、Header & Footer、Google Maps API、LINE Pay API",
+    "project": "個人賣場、賣場管理、會員中心、Header & Footer、Google Maps API、LINE Pay API",
     "link": "https://github.com/gsn94561266/housetune-fe",
     "video": "https://youtu.be/MCf9-OmjjJQ"
   },

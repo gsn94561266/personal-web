@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
 
   // home
   .home-container {
@@ -29,7 +28,7 @@
       }
     }
     .home-list li:not(:last-child) {
-      border-right: 1px solid #cccccc; /* Adjust the color and style as per your preference */
+      border-right: 1px solid #cccccc;
     }
   }
 

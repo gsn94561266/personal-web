@@ -8,7 +8,6 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
-
 function App() {
   const [hamburger, setHamburger] = useState(false);
   const [toTop, setToTop] = useState(false);
@@ -36,8 +35,11 @@ function App() {
 
       Object.keys(refs).forEach((v) => {
         const ref = refs[v];
-        if (ref.current && ref.current.offsetTop <= scrollTop) {
-          setRefSelect(v);
+        if (ref.current) {
+          const { offsetTop } = ref.current;
+          if (scrollTop >= offsetTop && scrollTop < offsetTop + 100) {
+            setRefSelect(v);
+          }
         }
       });
 

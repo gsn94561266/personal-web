@@ -1,13 +1,11 @@
 .App {
+  cursor: default;
   nav {
     transition: 0.5s;
   }
-  .cursor-default {
-    cursor: default;
-  }
   .hamburger-menu {
     background-color: #fff;
-    width: 70%;
+    width: 75%;
     height: 100%;
     position: fixed;
     left: -100%;
@@ -20,6 +18,12 @@
   }
   .menu-avatar {
     height: 50px;
+  }
+  .page-container {
+    display: flex;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
   }
   .to-top {
     position: fixed;

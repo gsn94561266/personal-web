@@ -37,21 +37,12 @@ const Portfolio = React.forwardRef((props, ref) => {
   );
   const CustomDot = ({ index, onClick, isActive }) => (
     <div
-      className={`bg-transparent rounded-circle position-relative border border-2 ${
+      className={`bg-transparent rounded-circle position-relative border border-2 custom-dots-container ${
         isActive ? 'border-secondary' : 'border-dark'
       }`}
-      style={{
-        width: '1rem',
-        height: '1rem',
-      }}
       onClick={onClick}>
       {isActive && (
-        <div
-          className="bg-secondary rounded-circle position-absolute top-50 start-50 translate-middle"
-          style={{
-            width: '0.5rem',
-            height: '0.5rem',
-          }}></div>
+        <div className="bg-secondary rounded-circle position-absolute top-50 start-50 translate-middle custom-dot"></div>
       )}
     </div>
   );
@@ -71,8 +62,8 @@ const Portfolio = React.forwardRef((props, ref) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: '',
-    prevArrow: '',
+    nextArrow: null,
+    prevArrow: null,
     beforeChange: (oldIndex, newIndex) => setActiveIndex(newIndex),
     customPaging: (i) => <CustomDot index={i} isActive={i === activeIndex} />,
   };
@@ -82,16 +73,14 @@ const Portfolio = React.forwardRef((props, ref) => {
       <div className="container py-5">
         <div className="m-2">
           <h1 className="fw-bold">作品</h1>
-          <p className="fw-bold fs-4 text-secondary mt-4">
+          <p className="fw-bold fs-5 text-secondary mt-4">
             探索我在不同領域的創作，通過設計和創意將想法轉化為現實。
           </p>
         </div>
         <div className="my-5 mx-3 mx-xl-0 d-lg-block d-none">
           <Slider {...settings}>
             {data.map((v, i) => (
-              <div
-                className="p-3 overflow-hidden rounded-3"
-                key={i}>
+              <div className="p-3 overflow-hidden rounded-3" key={i}>
                 <img
                   src={`${process.env.PUBLIC_URL}${v.img}`}
                   alt={v.img}

@@ -23,10 +23,10 @@ const MenuItems = [
     title: '作品',
     ref: 'Portfolio',
   },
-  // {
-  //   title: '聯絡',
-  //   ref: 'Contact',
-  // },
+  {
+    title: '聯絡',
+    ref: 'Contact',
+  },
 ];
 
 function App() {
@@ -48,7 +48,11 @@ function App() {
     };
 
     const handleScroll = () => {
-      const { scrollTop } = document.documentElement || document.body;
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement || document.body;
+
+      const lastPageHeight = scrollHeight - clientHeight;
+      const isAtBottom = scrollTop >= lastPageHeight;
 
       Object.keys(refs).forEach((v) => {
         const ref = refs[v];
@@ -56,6 +60,11 @@ function App() {
           setRefSelect(v);
         }
       });
+
+      if (isAtBottom) {
+        const lastPageKey = Object.keys(refs).pop();
+        setRefSelect(lastPageKey);
+      }
     };
 
     window.addEventListener('scroll', toTopButton);
@@ -75,7 +84,7 @@ function App() {
         }>
         <div className="d-flex justify-content-between p-3 align-items-center">
           <div className="ms-lg-3">
-            <span className="text-black fw-bold fs-2 cursor-default">
+            <span className="text-black fw-bold fs-2">
               <span className="text-primary text-decoration-underline">T</span>
               ony
             </span>
@@ -126,7 +135,7 @@ function App() {
             }>
             <div className="bg-white d-block d-lg-none vh-100 position-relative">
               <div className="border-bottom border-dark p-3">
-                <span className="text-black fw-bold fs-2 cursor-default">
+                <span className="text-black fw-bold fs-2">
                   <span className="text-primary text-decoration-underline">
                     T
                   </span>
@@ -177,7 +186,7 @@ function App() {
         <Home ref={refs.Home} />
         <About ref={refs.About} />
         <Portfolio ref={refs.Portfolio} />
-        {/* <Contact ref={refs.Contact} /> */}
+        <Contact ref={refs.Contact} />
       </main>
 
       {/* to top */}

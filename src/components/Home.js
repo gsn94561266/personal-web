@@ -21,7 +21,7 @@ const Home = React.forwardRef((props, ref) => {
     let timer;
 
     if (isDeleting) {
-      // 删除文字
+      // 刪除文字
       timer = setTimeout(() => {
         setText((prevText) => prevText.slice(0, -1));
 
@@ -51,23 +51,22 @@ const Home = React.forwardRef((props, ref) => {
 
   return (
     <div className="component bg-info" ref={ref}>
-      <div className="container text-center">
-        <div className="">
+      <div className="container text-center home-container">
+        <div className="p-5">
           <img
-            className="home-avatar my-2 p-4"
+            className="w-100 home-avatar"
             src={process.env.PUBLIC_URL + '/images/main.png'}
             alt="avatar"
           />
         </div>
         <div>
           <h5 className="text-secondary fw-semibold">哈囉，我是明泓儒</h5>
-          <h1 className="my-3 ">
+          <h1 className="my-3">
             <span className="fw-bold">{text}</span>
             <span>|</span>
           </h1>
-          <p className="text-secondary">
+          <p className="text-secondary text-break mx-2">
             我是一位前端 React 開發者，
-            <br />
             專長包括網站開發、使用者界面設計和前端技術。
           </p>
           <div className="mt-4">
@@ -119,7 +118,7 @@ const Home = React.forwardRef((props, ref) => {
               </li>
             </ul>
           </div>
-          <div className="mt-5">
+          <div className="mt-4">
             <a
               href={process.env.PUBLIC_URL + '/files/Tony_CV.pdf'}
               className="btn btn-outline-dark rounded-pill py-2 px-4 border border-2 border-dark fw-semibold"

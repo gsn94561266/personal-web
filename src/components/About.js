@@ -39,10 +39,10 @@ const About = React.forwardRef((props, ref) => {
 
   return (
     <div className="component" ref={ref}>
-      <div className="container px-4 mt-lg-5 mt-0">
+      <div className="container px-4">
         <div className="row flex-column-reverse flex-lg-row justify-content-between my-5">
           <div className="col-lg-6">
-            <div className='my-5'>
+            <div className="my-5">
               <h1 className="fw-bold">關於</h1>
             </div>
             <div className="d-block d-lg-none">
@@ -221,14 +221,12 @@ const About = React.forwardRef((props, ref) => {
                           <div className="row mt-4">
                             <div className="col-12 col-sm-6 p-3">
                               <div className="p-4 card m-0">
-                                <h1
-                                  className="text-primary"
-                                  style={{ fontSize: '3rem' }}>
+                                <h1 className="text-primary about-amount">
                                   05
                                   <RxPlus className="fs-1 text-primary mb-1" />
                                 </h1>
                                 <div className="d-flex">
-                                  <div className="bg-dark line me-4 d-none d-sm-block"></div>
+                                  <div className="bg-dark about-line me-4 d-none d-sm-block"></div>
                                   <h4 className="fw-bold text-secondary fs-5">
                                     工作年資
                                   </h4>
@@ -237,14 +235,12 @@ const About = React.forwardRef((props, ref) => {
                             </div>
                             <div className="col-12 col-sm-6 p-3">
                               <div className="p-4 card">
-                                <h1
-                                  className="text-primary"
-                                  style={{ fontSize: '3rem' }}>
+                                <h1 className="text-primary about-amount">
                                   03
                                   <RxPlus className="fs-1 text-primary mb-1" />
                                 </h1>
                                 <div className="d-flex">
-                                  <div className="bg-dark line me-4 d-none d-sm-block"></div>
+                                  <div className="bg-dark about-line me-4 d-none d-sm-block"></div>
                                   <h4 className="fw-bold text-secondary fs-5">
                                     完成專案
                                   </h4>
@@ -253,14 +249,12 @@ const About = React.forwardRef((props, ref) => {
                             </div>
                             <div className="col-12 col-sm-6 p-3">
                               <div className="p-4 card">
-                                <h1
-                                  className="text-primary"
-                                  style={{ fontSize: '3rem' }}>
+                                <h1 className="text-primary about-amount">
                                   03
                                   <RxPlus className="fs-1 text-primary mb-1" />
                                 </h1>
                                 <div className="d-flex">
-                                  <div className="bg-dark line me-4 d-none d-sm-block"></div>
+                                  <div className="bg-dark about-line me-4 d-none d-sm-block"></div>
                                   <h4 className="fw-bold text-secondary fs-5">
                                     程式語言
                                   </h4>
@@ -269,14 +263,12 @@ const About = React.forwardRef((props, ref) => {
                             </div>
                             <div className="col-12 col-sm-6 p-3">
                               <div className="p-4 card">
-                                <h1
-                                  className="text-primary"
-                                  style={{ fontSize: '3rem' }}>
+                                <h1 className="text-primary about-amount">
                                   15
                                   <RxPlus className="fs-1 text-primary mb-1" />
                                 </h1>
                                 <div className="d-flex">
-                                  <div className="bg-dark line me-4 d-none d-sm-block"></div>
+                                  <div className="bg-dark about-line me-4 d-none d-sm-block"></div>
                                   <h4 className="fw-bold text-secondary fs-5">
                                     獲獎紀錄
                                   </h4>
@@ -292,11 +284,11 @@ const About = React.forwardRef((props, ref) => {
                             </span>
                           </h2>
                           <div className="border-start ps-4 ps-lg-5 ms-3 mt-5 position-relative">
-                            <BsBriefcase className="bg-primary text-white about-logo rounded-4" />
+                            <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center about-icon-container">
+                              <BsBriefcase className="text-white about-icon" />
+                            </div>
                             <div className="pt-2">
-                              <span
-                                className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
-                                style={{ fontSize: '0.8rem' }}>
+                              <span className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold about-date">
                                 2019 - 2022
                               </span>
                             </div>
@@ -313,11 +305,11 @@ const About = React.forwardRef((props, ref) => {
                             </p>
                           </div>
                           <div className="border-start ps-4 ps-lg-5 ms-3 mt-5 position-relative">
-                            <BsBriefcase className="bg-primary text-white about-logo rounded-4" />
+                            <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center about-icon-container">
+                              <BsBriefcase className="text-white about-icon" />
+                            </div>
                             <div className="pt-2">
-                              <span
-                                className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
-                                style={{ fontSize: '0.8rem' }}>
+                              <span className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold about-date">
                                 2014 - 2019
                               </span>
                             </div>
@@ -341,11 +333,11 @@ const About = React.forwardRef((props, ref) => {
                             </span>
                           </h2>
                           <div className="border-start ps-4 ps-lg-5 ms-3 mt-5 position-relative">
-                            <BsBook className="bg-primary text-white about-logo rounded-4" />
+                            <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center about-icon-container">
+                              <BsBook className="text-white about-icon" />
+                            </div>
                             <div className="pt-2">
-                              <span
-                                className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
-                                style={{ fontSize: '0.8rem' }}>
+                              <span className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold about-date">
                                 2022 - 2023
                               </span>
                             </div>
@@ -362,11 +354,11 @@ const About = React.forwardRef((props, ref) => {
                             </p>
                           </div>
                           <div className="border-start ps-4 ps-lg-5 ms-3 mt-5 position-relative">
-                            <BsBook className="bg-primary text-white about-logo rounded-4" />
+                            <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center about-icon-container">
+                              <BsBook className="text-white about-icon" />
+                            </div>
                             <div className="pt-2">
-                              <span
-                                className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold"
-                                style={{ fontSize: '0.8rem' }}>
+                              <span className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold about-date">
                                 2013 - 2017
                               </span>
                             </div>

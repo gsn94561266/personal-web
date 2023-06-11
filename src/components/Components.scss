@@ -4,68 +4,100 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
+
   // home
-  .home-avatar {
-    max-width: 300px;
-    transition: 3s linear;
-    border-radius: 60% 40% 50% 50% / 35% 45% 55% 65%;
-    animation: go 50s infinite;
-  }
-  @keyframes go {
-    0% {
+  .home-container {
+    max-width: 410px;
+    .home-avatar {
+      transition: 3s linear;
       border-radius: 60% 40% 50% 50% / 35% 45% 55% 65%;
+      animation: go 30s infinite;
     }
-    25% {
-      border-radius: 45% 55% 37% 63% / 56% 36% 54% 44%;
+    @keyframes go {
+      0% {
+        border-radius: 60% 40% 50% 50% / 35% 45% 55% 65%;
+      }
+      25% {
+        border-radius: 45% 55% 37% 63% / 56% 36% 54% 44%;
+      }
+      50% {
+        border-radius: 59% 41% 68% 32% / 48% 52% 48% 62%;
+      }
+      75% {
+        border-radius: 50% 50% 39% 61% / 61% 69% 31% 39%;
+      }
     }
-    50% {
-      border-radius: 59% 41% 68% 32% / 48% 52% 48% 62%;
+    .home-list li:not(:last-child) {
+      border-right: 1px solid #cccccc; /* Adjust the color and style as per your preference */
     }
-    75% {
-      border-radius: 50% 50% 39% 61% / 61% 69% 31% 39%;
-    }
-  }
-  .home-list li:not(:last-child) {
-    border-right: 1px solid #cccccc; /* Adjust the color and style as per your preference */
   }
 
   // about
   .custom-border {
     border-bottom: 0.16rem dashed #cccccc;
   }
-
   .popup {
     z-index: 9999;
     .popup-close {
       top: -25px;
     }
-    .line {
+    .about-line {
       height: 1px;
       width: 2.5rem;
     }
-    .about-logo {
-      padding: 0.7rem;
-      font-size: 2.5rem;
+    .about-amount {
+      font-size: 3rem;
+    }
+    .about-icon-container {
       position: absolute;
-      top: 0;
       left: -1.3rem;
+      width: 40px;
+      height: 40px;
+    }
+    .about-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .about-date {
+      font-size: 0.8rem;
     }
   }
+
   // portfolio
   .arrow {
     z-index: 1;
   }
-
- 
   .slider-img:hover {
     transform: scale(1.03);
     transition: 0.5s;
   }
-
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
   .hover-black:hover {
     background-color: #202020;
     color: white !important;
     border-color: white !important;
     transition: 0.5s;
   }
+  .custom-dots-container {
+    width: 1rem;
+    height: 1rem;
+    .custom-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+}
+
+// contact
+.contact-icon-container {
+  width: 55px;
+  height: 55px;
+}
+.contact-icon {
+  width: 25px;
+  height: 25px;
 }

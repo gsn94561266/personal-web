@@ -25,6 +25,18 @@
   },
   {
     "id": 3,
+    "title": "魚股市",
+    "img": "/images/portfolio/fish_stock.png",
+    "preview": "/images/portfolio/fish_stock_pre.png",
+    "date": "2023/06 - ",
+    "description": "魚股市提供即時股市資料、會員系統和資料展示，幫助用戶做出投資決策。",
+    "technology": "React.js、Express.js、MySQL、Bootstrap",
+    "project": "股票資訊、註冊登入、忘記密碼、Google Login API",
+    "link": "https://github.com/gsn94561266/FishStock",
+    "video": "https://youtu.be/mDHPuO3vEu0"
+  },
+  {
+    "id": 4,
     "img": "/images/portfolio/hollow_talk.png",
     "preview": "/images/portfolio/hollow_talk_pre.png",
     "title": "HollowTalk 匿名聊天室",
@@ -36,7 +48,7 @@
     "video": "https://youtu.be/Jn6SYjvw6Oc"
   },
   {
-    "id": 4,
+    "id": 5,
     "img": "/images/portfolio/music_festival.jpg",
     "preview": "/images/portfolio/music_festival_pre.jpg",
     "title": "大甲媽音樂節 - 原創組",
@@ -48,7 +60,7 @@
     "video": "https://fb.watch/l0qjGYzHiy/"
   },
   {
-    "id": 5,
+    "id": 6,
     "img": "/images/portfolio/dont_call.png",
     "preview": "/images/portfolio/dont_call_pre.JPG",
     "title": "Don't Call 東扣",

@@ -31,7 +31,7 @@
     "date": "2023/06 - ",
     "description": "魚股市提供即時股市資料、會員系統和資料展示，幫助用戶做出投資決策。",
     "technology": "React.js、Express.js、MySQL、Bootstrap",
-    "project": "股票資訊、註冊登入、忘記密碼、Google Login API",
+    "project": "註冊登入、忘記密碼、Google Login API、FinMind API",
     "link": "https://github.com/gsn94561266/FishStock",
     "video": "https://youtu.be/mDHPuO3vEu0"
   },

@@ -47,7 +47,7 @@ const About = React.forwardRef((props, ref) => {
                 alt="avatar"
               />
             </div>
-            <div className='mt-5 mt-lg-0'>
+            <div className='mt-4 mt-lg-0'>
               {/* <h4 className="fw-bold">
                 <span className="fw-normal">哈囉，我是</span>
                 明泓儒

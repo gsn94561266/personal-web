@@ -37,7 +37,7 @@ const About = React.forwardRef((props, ref) => {
       <div className="container px-4">
         <div className="row flex-column-reverse flex-lg-row justify-content-between my-5">
           <div className="col-lg-6">
-            <div className="my-5">
+            <div className="mt-5 mb-3">
               <h1 className="fw-bold">關於</h1>
             </div>
             <div className="d-block d-lg-none">
@@ -47,49 +47,60 @@ const About = React.forwardRef((props, ref) => {
                 alt="avatar"
               />
             </div>
-            <div className="my-5">
-              <h4 className="fw-bold">
+            <div className='mt-5 mt-lg-0'>
+              {/* <h4 className="fw-bold">
                 <span className="fw-normal">哈囉，我是</span>
                 明泓儒
-              </h4>
+              </h4> */}
               <p className="text-secondary fw-semibold">
-                我先前在音樂出版社工作，負責樂譜製作、錄音、編曲和混音等工作。最近完成了資展國際的『前端工程師養成班』進修課程，這讓我對前端領域深深的著迷！透過這個課程，我學習了HTML、CSS和JavaScript等前端技術，並開始進一步探索網頁開發和使用者介面設計。我現在致力於發展前端技能，並期待在這個領域中不斷學習和成長。
+                我先前在音樂出版公司工作，負責樂譜製作、錄音、編曲和混音。最近完成了資展國際的『前端工程師就業養成班』進修課程，讓我對前端領域深深著迷！透過這個課程，我學會了HTML、CSS和JavaScript等前端技術，並且已經能夠應用React.js與Node.js開發網站功能，像是常見的註冊登入、串接第三方API、管理系統，響應式網頁等。我現在致力於發展前端技能，並期待在這個領域中不斷學習和成長。
               </p>
             </div>
             <div className="my-5">
               <h4 className="fw-bold">我的技能</h4>
-              <p className="text-secondary fw-semibold">
-                我精通多項技術，並擁有開發經驗。我熟悉 JavaScript、React.js 和
-                Bootstrap 等前端技術。此外，還具有 Express.js、PHP 和 MySQL
-                等後端開發技能。
-              </p>
               <div className="row my-4">
                 <div className="col-lg-6">
                   <div className="mb-4">
-                    <p className="fw-semibold">JavaScript</p>
-                    <ProgressBar progress={75} />
+                    <p className="fw-semibold">HTML / CSS / JavaScript ES6</p>
+                    <ProgressBar progress={90} />
                   </div>
                   <div className="mb-4">
-                    <p className="fw-semibold">React.Js</p>
-                    <ProgressBar progress={85} />
-                  </div>
-                  <div className="mb-4">
-                    <p className="fw-semibold">Bootstrap</p>
+                    <p className="fw-semibold">React.Js / React Hook</p>
                     <ProgressBar progress={80} />
+                  </div>
+                  <div className="mb-4">
+                    <p className="fw-semibold">Node.Js / Express.Js</p>
+                    <ProgressBar progress={80} />
+                  </div>
+                  <div className="mb-4">
+                    <p className="fw-semibold">Bootstrap / RWD</p>
+                    <ProgressBar progress={80} />
+                  </div>
+                  <div className="mb-4">
+                    <p className="fw-semibold">Sass / SCSS</p>
+                    <ProgressBar progress={70} />
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="mb-4">
-                    <p className="fw-semibold">Express.Js</p>
+                    <p className="fw-semibold">Ajax / axios</p>
+                    <ProgressBar progress={80} />
+                  </div>
+                  <div className="mb-4">
+                    <p className="fw-semibold">Restful API</p>
                     <ProgressBar progress={70} />
                   </div>
                   <div className="mb-4">
                     <p className="fw-semibold">PHP</p>
-                    <ProgressBar progress={55} />
+                    <ProgressBar progress={60} />
                   </div>
                   <div className="mb-4">
                     <p className="fw-semibold">MySQL</p>
-                    <ProgressBar progress={65} />
+                    <ProgressBar progress={70} />
+                  </div>
+                  <div className="mb-4">
+                    <p className="fw-semibold">Git / GitHub</p>
+                    <ProgressBar progress={80} />
                   </div>
                 </div>
               </div>

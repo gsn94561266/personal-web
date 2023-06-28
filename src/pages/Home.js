@@ -63,7 +63,7 @@ const Home = React.forwardRef((props, ref) => {
             <span>|</span>
           </h1>
           <p className="text-secondary text-break mx-2">
-            我是一位前端 React 開發者，
+            我是一位前端工程師，
             專長包括網站開發、使用者界面設計和前端技術。
           </p>
           <div className="mt-4">

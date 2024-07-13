@@ -12,10 +12,10 @@ const MenuItems = [
     title: '作品',
     ref: 'Portfolio',
   },
-  {
-    title: '聯絡',
-    ref: 'Contact',
-  },
+  // {
+  //   title: '聯絡',
+  //   ref: 'Contact',
+  // },
 ];
 
 const NavBar = ({ refSelect, refs, hamburger, setHamburger, visible }) => {

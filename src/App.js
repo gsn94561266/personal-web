@@ -72,7 +72,7 @@ function App() {
         <Home ref={refs.Home} />
         <About ref={refs.About} />
         <Portfolio ref={refs.Portfolio} />
-        <Contact ref={refs.Contact} />
+        {/* <Contact ref={refs.Contact} /> */}
       </main>
 
       {toTop && (

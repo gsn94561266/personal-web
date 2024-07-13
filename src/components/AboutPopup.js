@@ -47,7 +47,7 @@ const AboutPopup = ({ setShowPopup }) => {
                   <div className="mb-4">
                     <span className="text-black-50 fw-bold">年齡</span>
                     <span className="me-1">:</span>
-                    <span className="text-primary fw-semibold">28</span>
+                    <span className="text-primary fw-semibold">29</span>
                   </div>
                   <div className="mb-4">
                     <span className="text-black-50 fw-bold">電話</span>
@@ -70,7 +70,7 @@ const AboutPopup = ({ setShowPopup }) => {
               </div>
               <div>
                 <a
-                  href={process.env.PUBLIC_URL + '/files/明泓儒_CV.pdf'}
+                  href={process.env.PUBLIC_URL + '/files/明泓儒.pdf'}
                   className="btn btn-outline-dark rounded-pill py-2 px-4 border border-2 border-dark fw-bold"
                   download>
                   下載履歷
@@ -85,7 +85,7 @@ const AboutPopup = ({ setShowPopup }) => {
                 <div className="col-12 col-sm-6 p-3">
                   <div className="p-4 card m-0">
                     <h1 className="text-primary about-amount">
-                      05
+                      06
                       <RxPlus className="fs-1 text-primary mb-1" />
                     </h1>
                     <div className="d-flex">
@@ -136,6 +136,26 @@ const AboutPopup = ({ setShowPopup }) => {
               <h2>
                 <span className="custom-border pb-2 fw-bold">工作經歷</span>
               </h2>
+              <div className="border-start ps-4 ps-lg-5 ms-3 mt-5 position-relative">
+                <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center about-icon-container">
+                  <BsBriefcase className="text-white about-icon" />
+                </div>
+                <div className="pt-2">
+                  <span className="py-2 px-3 rounded-pill bg-secondary bg-opacity-25 fw-semibold about-date">
+                    2023 -
+                  </span>
+                </div>
+                <div className="row align-items-center mt-4">
+                  <h5 className="col-auto pe-0 fw-bold">前端工程師 -</h5>
+                  <h6 className="col-auto fw-bold">鉅恒投資有限公司</h6>
+                </div>
+                <p className="text-secondary mt-2">
+                  負責 ERP 和 WMS 系統的開發與維護，並使用 React、TypeScript 和
+                  CSS 框架來創建各種表格、圖表和小部件。此外，運用 GitHub
+                  Actions 進行自動化，使用 Docker 進行部署，並將自定義功能封裝為
+                  npm 模組，以提高開發效率和系統性能。
+                </p>
+              </div>
               <div className="border-start ps-4 ps-lg-5 ms-3 mt-5 position-relative">
                 <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center about-icon-container">
                   <BsBriefcase className="text-white about-icon" />

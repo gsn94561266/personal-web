@@ -52,7 +52,7 @@ const Home = React.forwardRef((props, ref) => {
         <div className="p-5">
           <img
             className="w-100 home-avatar"
-            src={process.env.PUBLIC_URL + '/images/main.png'}
+            src={process.env.PUBLIC_URL + '/images/main.jpg'}
             alt="avatar"
           />
         </div>
@@ -88,7 +88,7 @@ const Home = React.forwardRef((props, ref) => {
               </li>
               <li className="px-3">
                 <a
-                  href="https://www.instagram.com/mingru_66/"
+                  href="https://www.instagram.com/tonym0606/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-secondary fs-4">
@@ -117,7 +117,7 @@ const Home = React.forwardRef((props, ref) => {
           </div>
           <div className="mt-4">
             <a
-              href={process.env.PUBLIC_URL + '/files/明泓儒_CV.pdf'}
+              href={process.env.PUBLIC_URL + '/files/明泓儒.pdf'}
               className="btn btn-outline-dark rounded-pill py-2 px-4 border border-2 border-dark fw-semibold"
               download>
               下載履歷

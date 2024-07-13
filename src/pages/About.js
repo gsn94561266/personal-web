@@ -47,13 +47,19 @@ const About = React.forwardRef((props, ref) => {
                 alt="avatar"
               />
             </div>
-            <div className='mt-4 mt-lg-0'>
+            <div className="mt-4 mt-lg-0">
               {/* <h4 className="fw-bold">
                 <span className="fw-normal">哈囉，我是</span>
                 明泓儒
               </h4> */}
               <p className="text-secondary fw-semibold">
-                我先前在音樂出版公司工作，負責樂譜製作、錄音、編曲和混音。最近完成了資展國際的『前端工程師就業養成班』進修課程，讓我對前端領域深深著迷！透過這個課程，我學會了HTML、CSS和JavaScript等前端技術，並且已經能夠應用React.js與Node.js開發網站功能，像是常見的註冊登入、串接第三方API、管理系統，響應式網頁等。我現在致力於發展前端技能，並期待在這個領域中不斷學習和成長。
+                {/* 我先前在音樂出版公司工作，負責樂譜製作、錄音、編曲和混音。最近完成了資展國際的『前端工程師就業養成班』進修課程，讓我對前端領域深深著迷！透過這個課程，我學會了HTML、CSS和JavaScript等前端技術，並且已經能夠應用React.js與Node.js開發網站功能，像是常見的註冊登入、串接第三方API、管理系統，響應式網頁等。我現在致力於發展前端技能，並期待在這個領域中不斷學習和成長。 */}
+                我是一名專業的 React
+                開發者，專注於根據使用者需求進行客製化開發。我擁有豐富的管理系統開發經驗，並精通使用
+                React、TypeScript 和 CSS
+                框架來創建各種表格、圖表和小部件。此外，我還熟練運用 Git
+                進行版本控制，使用 Docker 進行部署，並將自定義功能封裝為 npm
+                模組，以提高開發效率和系統性能。
               </p>
             </div>
             <div className="my-5">
@@ -61,19 +67,19 @@ const About = React.forwardRef((props, ref) => {
               <div className="row my-4">
                 <div className="col-lg-6">
                   <div className="mb-4">
-                    <p className="fw-semibold">HTML / CSS / JavaScript ES6</p>
+                    <p className="fw-semibold">HTML / CSS / TypeScript</p>
                     <ProgressBar progress={90} />
                   </div>
                   <div className="mb-4">
-                    <p className="fw-semibold">React.Js / React Hook</p>
-                    <ProgressBar progress={80} />
+                    <p className="fw-semibold">React.Js</p>
+                    <ProgressBar progress={90} />
                   </div>
                   <div className="mb-4">
                     <p className="fw-semibold">Node.Js / Express.Js</p>
                     <ProgressBar progress={80} />
                   </div>
                   <div className="mb-4">
-                    <p className="fw-semibold">Bootstrap / RWD</p>
+                    <p className="fw-semibold">Bootstrap / Ant Design / MUI</p>
                     <ProgressBar progress={80} />
                   </div>
                   <div className="mb-4">
@@ -92,7 +98,7 @@ const About = React.forwardRef((props, ref) => {
                   </div>
                   <div className="mb-4">
                     <p className="fw-semibold">PHP</p>
-                    <ProgressBar progress={60} />
+                    <ProgressBar progress={50} />
                   </div>
                   <div className="mb-4">
                     <p className="fw-semibold">MySQL</p>

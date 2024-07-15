@@ -1,15 +1,15 @@
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
 const MenuItems = [
   {
-    title: '首頁',
+    title: 'Home',
     ref: 'Home',
   },
   {
-    title: '關於',
+    title: 'ABOUT ME',
     ref: 'About',
   },
   {
-    title: '作品',
+    title: 'MY WORK',
     ref: 'Portfolio',
   },
   // {
@@ -21,7 +21,7 @@ const MenuItems = [
 const NavBar = ({ refSelect, refs, hamburger, setHamburger, visible }) => {
   return (
     <nav className={`fixed-top bg-white ${visible ? 'shadow-sm' : ''}`}>
-      <div className="d-flex justify-content-between align-items-center p-3">
+      <div className="d-flex justify-content-between align-items-center p-2">
         <div
           className="ms-lg-3"
           role="button"
@@ -108,7 +108,7 @@ const NavBar = ({ refSelect, refs, hamburger, setHamburger, visible }) => {
               <div className="m-2">
                 <img
                   className="menu-avatar rounded-circle"
-                  src={process.env.PUBLIC_URL + '/images/main.png'}
+                  src={process.env.PUBLIC_URL + '/images/main.jpg'}
                   alt="avatar"
                 />
               </div>

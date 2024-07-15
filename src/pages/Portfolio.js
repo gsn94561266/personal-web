@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { useInView } from 'react-intersection-observer';
 
 import PortfolioPopup from '../components/PortfolioPopup';
 import data from '../data/Portfolio.json';
@@ -11,6 +12,21 @@ import '../styles/pages.scss';
 const Portfolio = React.forwardRef((props, ref) => {
   const [showPopupId, setShowPopupId] = useState();
   const [activeIndex, setActiveIndex] = useState(0);
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (showPopupId) {
+      document.body.classList.add('lock-scroll');
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    } else {
+      document.body.classList.remove('lock-scroll');
+    }
+
+    return () => document.body.classList.remove('lock-scroll');
+  }, [showPopupId]);
 
   const CustomPrevArrow = ({ onClick }) => (
     <div className="position-absolute top-50 start-0 translate-middle arrow">
@@ -66,18 +82,21 @@ const Portfolio = React.forwardRef((props, ref) => {
   };
 
   return (
-    <div className="component bg-info" ref={ref}>
-      <div className="container py-5">
+    <div className="component portfolio-background" ref={ref}>
+      <div className="container my-5 py-5 portfolio-container" ref={inViewRef}>
         <div className="m-2">
-          <h1 className="fw-bold">作品</h1>
+          <h1 className="fw-bold">MY WORK</h1>
           <p className="fw-bold fs-5 text-secondary mt-4">
             探索我在不同領域的創作，透過設計和創意將想法轉化為現實。
           </p>
         </div>
-        <div className="my-5 mx-3 mx-xl-0 d-lg-block d-none">
+        <div
+          className={`my-5 mx-3 mx-xl-0 d-lg-block d-none slider-item ${
+            inView ? 'in-view' : ''
+          }`}>
           <Slider {...settings}>
             {data.map((v, i) => (
-              <div className="p-3 overflow-hidden rounded-3" key={i}>
+              <div className="p-3 overflow-hidden rounded-3 slider-img" key={i}>
                 <img
                   src={`${process.env.PUBLIC_URL}${v.img}`}
                   alt={v.title}
@@ -109,11 +128,13 @@ const Portfolio = React.forwardRef((props, ref) => {
           </Slider>
         </div>
       </div>
-      <PortfolioPopup
-        showPopupId={showPopupId}
-        data={data}
-        setShowPopupId={setShowPopupId}
-      />
+      {showPopupId && (
+        <PortfolioPopup
+          showPopupId={showPopupId}
+          data={data}
+          setShowPopupId={setShowPopupId}
+        />
+      )}
     </div>
   );
 });

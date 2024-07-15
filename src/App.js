@@ -17,7 +17,7 @@ function App() {
     Home: useRef(null),
     About: useRef(null),
     Portfolio: useRef(null),
-    Contact: useRef(null),
+    // Contact: useRef(null),
   };
 
   useEffect(() => {
@@ -58,6 +58,11 @@ function App() {
     };
   }, []);
 
+  const backgroundStyle = {
+    background: `rgb(26, 26, 26)`,
+    // background: `rgb(26, 26, 26) url(${process.env.PUBLIC_URL}/images/ABOUT_bg.svg) repeat 100% fixed`,
+  };
+
   return (
     <div className="App">
       <NavBar
@@ -68,7 +73,7 @@ function App() {
         visible={visible}
       />
 
-      <main>
+      <main style={backgroundStyle}>
         <Home ref={refs.Home} />
         <About ref={refs.About} />
         <Portfolio ref={refs.Portfolio} />
@@ -77,7 +82,7 @@ function App() {
 
       {toTop && (
         <GoTriangleUp
-          className="bg-dark text-white p-3 rounded-1 to-top"
+          className="text-dark p-3 to-top"
           size="3rem"
           role="button"
           onClick={() => {

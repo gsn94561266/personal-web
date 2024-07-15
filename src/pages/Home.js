@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import {
   FiFacebook,
   FiYoutube,
@@ -15,6 +16,10 @@ const Home = React.forwardRef((props, ref) => {
   const [text, setText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   useEffect(() => {
     let timer;
@@ -46,27 +51,39 @@ const Home = React.forwardRef((props, ref) => {
     return () => clearTimeout(timer);
   }, [currentIndex, text, isDeleting]);
 
+  useEffect(() => {
+    if (inView) {
+      const elements = document.querySelectorAll('.animate-item');
+      elements.forEach((element, index) => {
+        setTimeout(() => {
+          element.classList.add('in-view');
+        }, index * 200);
+      });
+    }
+  }, [inView]);
+
   return (
-    <div className="component bg-info" ref={ref}>
-      <div className="container text-center home-container">
+    <div className="component home-background" ref={ref}>
+      <div className="container text-center home-container" ref={inViewRef}>
         <div className="p-5">
           <img
-            className="w-100 home-avatar"
+            className="w-100 home-avatar animate-item"
             src={process.env.PUBLIC_URL + '/images/main.jpg'}
             alt="avatar"
           />
         </div>
         <div>
-          <h5 className="text-secondary fw-semibold">哈囉，我是明泓儒</h5>
-          <h1 className="my-3">
+          <h5 className="text-secondary fw-semibold animate-item">
+            Hello, I'm Tony Ming
+          </h5>
+          <h1 className="my-3 animate-item">
             <span className="fw-bold">{text}</span>
             <span>|</span>
           </h1>
-          <p className="text-secondary text-break mx-2">
-            我是一位前端工程師，
-            專長包括網站開發、使用者界面設計和前端技術。
+          <p className="text-secondary text-break mx-2 animate-item">
+            我是一位前端工程師， 專長包括網站開發、使用者界面設計和前端技術。
           </p>
-          <div className="mt-4">
+          <div className="mt-4 animate-item">
             <ul className="list-unstyled d-flex justify-content-center home-list">
               <li className="px-3">
                 <a
@@ -115,7 +132,7 @@ const Home = React.forwardRef((props, ref) => {
               </li>
             </ul>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 animate-item">
             <a
               href={process.env.PUBLIC_URL + '/files/明泓儒.pdf'}
               className="btn btn-outline-dark rounded-pill py-2 px-4 border border-2 border-dark fw-semibold"

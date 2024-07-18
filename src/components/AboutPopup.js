@@ -4,10 +4,10 @@ import { BsBriefcase, BsBook } from 'react-icons/bs';
 const AboutPopup = ({ setShowPopup }) => {
   return (
     <div className="bg-black bg-opacity-75 w-100 h-100 position-fixed top-0 start-0 d-flex justify-content-center align-items-center popup">
-      <div className="container h-75 mx-4">
-        <div className="position-relative mb-lg-4 mb-3">
+      <div className="container h-75">
+        <div className="mb-2 text-end">
           <RxCrossCircled
-            className="fs-1 text-white text-center popup-close position-absolute buttom-100 end-0"
+            className="fs-1 text-white"
             role="button"
             onClick={() => {
               setShowPopup(false);

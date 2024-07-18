@@ -1,25 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import AboutPopup from '../components/AboutPopup';
-import '../styles/pages.scss';
-
-const About = React.forwardRef((props, ref) => {
-  const [showPopup, setShowPopup] = useState(false);
+const About = React.forwardRef(({ setShowPopup }, ref) => {
   const { ref: inViewRef, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.2,
   });
-
-  useEffect(() => {
-    if (showPopup) {
-      document.body.classList.add('lock-scroll');
-    } else {
-      document.body.classList.remove('lock-scroll');
-    }
-
-    return () => document.body.classList.remove('lock-scroll');
-  }, [showPopup]);
 
   const ProgressBar = ({ progress }) => {
     return (
@@ -134,7 +120,6 @@ const About = React.forwardRef((props, ref) => {
           </div>
         </div>
       </div>
-      {showPopup && <AboutPopup setShowPopup={setShowPopup} />}
     </div>
   );
 });

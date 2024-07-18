@@ -1,23 +1,27 @@
 import { useEffect, useState, useRef } from 'react';
 import { GoTriangleUp } from 'react-icons/go';
-
-import './styles/App.scss';
 import NavBar from './components/NavBar';
+import PortfolioPopup from './components/PortfolioPopup';
+import AboutPopup from './components/AboutPopup';
 import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import './App.scss';
 
 function App() {
   const [hamburger, setHamburger] = useState(false);
   const [toTop, setToTop] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [showPopupId, setShowPopupId] = useState();
+  const [showPopup, setShowPopup] = useState(false);
+  const [data, setData] = useState([]);
   const [refSelect, setRefSelect] = useState('Home');
   const refs = {
     Home: useRef(null),
     About: useRef(null),
     Portfolio: useRef(null),
-    // Contact: useRef(null),
+    Contact: useRef(null),
   };
 
   useEffect(() => {
@@ -58,9 +62,19 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    if (showPopup || showPopupId) {
+      document.body.classList.add('lock-scroll');
+    } else {
+      document.body.classList.remove('lock-scroll');
+    }
+
+    return () => document.body.classList.remove('lock-scroll');
+  }, [showPopup, showPopupId]);
+
   const backgroundStyle = {
-    background: `rgb(26, 26, 26)`,
-    // background: `rgb(26, 26, 26) url(${process.env.PUBLIC_URL}/images/ABOUT_bg.svg) repeat 100% fixed`,
+    // background: `rgb(26, 26, 26)`,
+    background: `rgb(26, 26, 26) url(${process.env.PUBLIC_URL}/images/bg.svg) repeat 100% fixed`,
   };
 
   return (
@@ -75,12 +89,16 @@ function App() {
 
       <main style={backgroundStyle}>
         <Home ref={refs.Home} />
-        <About ref={refs.About} />
-        <Portfolio ref={refs.Portfolio} />
-        {/* <Contact ref={refs.Contact} /> */}
+        <About ref={refs.About} setShowPopup={setShowPopup} />
+        <Portfolio
+          ref={refs.Portfolio}
+          setShowPopupId={setShowPopupId}
+          setData={setData}
+        />
+        <Contact ref={refs.Contact} />
       </main>
 
-      {toTop && (
+      {toTop && !showPopupId && !showPopup && (
         <GoTriangleUp
           className="text-dark p-3 to-top"
           size="3rem"
@@ -91,6 +109,16 @@ function App() {
           }}
         />
       )}
+
+      {showPopupId && (
+        <PortfolioPopup
+          showPopupId={showPopupId}
+          data={data}
+          setShowPopupId={setShowPopupId}
+        />
+      )}
+
+      {showPopup && <AboutPopup setShowPopup={setShowPopup} />}
     </div>
   );
 }

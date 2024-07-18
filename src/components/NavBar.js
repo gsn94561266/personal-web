@@ -1,4 +1,5 @@
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
+
 const MenuItems = [
   {
     title: 'Home',
@@ -12,10 +13,10 @@ const MenuItems = [
     title: 'MY WORK',
     ref: 'Portfolio',
   },
-  // {
-  //   title: '聯絡',
-  //   ref: 'Contact',
-  // },
+  {
+    title: 'CONTACT ME',
+    ref: 'Contact',
+  },
 ];
 
 const NavBar = ({ refSelect, refs, hamburger, setHamburger, visible }) => {
@@ -73,11 +74,11 @@ const NavBar = ({ refSelect, refs, hamburger, setHamburger, visible }) => {
         {/* mobile menu */}
         <div
           className={
-            hamburger ? 'fixed-top hamburger-menu active' : 'hamburger-menu'
+            hamburger ? 'fixed-top hamburger-menu active' : 'fixed-top hamburger-menu'
           }>
-          <div className="bg-white d-block d-lg-none vh-100 position-relative">
-            <div className="border-bottom border-dark p-3">
-              <span className="text-black fw-bold fs-2">
+          <div className="d-block d-lg-none vh-100 position-relative text-white">
+            <div className="border-bottom border-dark p-2">
+              <span className="fw-bold fs-2">
                 <span className="text-primary text-decoration-underline">
                   T
                 </span>
@@ -92,7 +93,7 @@ const NavBar = ({ refSelect, refs, hamburger, setHamburger, visible }) => {
                     role="button"
                     className={`my-2 p-2 ${
                       v.ref === refSelect
-                        ? 'rounded-1 bg-dark bg-opacity-10'
+                        ? 'rounded-1 bg-white bg-opacity-25'
                         : ''
                     }`}
                     onClick={() => {

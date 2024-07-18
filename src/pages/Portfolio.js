@@ -1,32 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { useInView } from 'react-intersection-observer';
-
-import PortfolioPopup from '../components/PortfolioPopup';
 import data from '../data/Portfolio.json';
-import '../styles/pages.scss';
 
-const Portfolio = React.forwardRef((props, ref) => {
-  const [showPopupId, setShowPopupId] = useState();
+const Portfolio = React.forwardRef(({ setShowPopupId, setData }, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { ref: inViewRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
-
-  useEffect(() => {
-    if (showPopupId) {
-      document.body.classList.add('lock-scroll');
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    } else {
-      document.body.classList.remove('lock-scroll');
-    }
-
-    return () => document.body.classList.remove('lock-scroll');
-  }, [showPopupId]);
 
   const CustomPrevArrow = ({ onClick }) => (
     <div className="position-absolute top-50 start-0 translate-middle arrow">
@@ -104,6 +89,7 @@ const Portfolio = React.forwardRef((props, ref) => {
                   role="button"
                   onClick={() => {
                     setShowPopupId(v.id);
+                    setData(data);
                   }}
                 />
               </div>
@@ -121,6 +107,7 @@ const Portfolio = React.forwardRef((props, ref) => {
                   role="button"
                   onClick={() => {
                     setShowPopupId(v.id);
+                    setData(data);
                   }}
                 />
               </div>
@@ -128,13 +115,6 @@ const Portfolio = React.forwardRef((props, ref) => {
           </Slider>
         </div>
       </div>
-      {showPopupId && (
-        <PortfolioPopup
-          showPopupId={showPopupId}
-          data={data}
-          setShowPopupId={setShowPopupId}
-        />
-      )}
     </div>
   );
 });

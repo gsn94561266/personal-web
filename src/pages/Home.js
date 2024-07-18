@@ -8,9 +8,7 @@ import {
   FiLinkedin,
 } from 'react-icons/fi';
 
-import '../styles/pages.scss';
-
-const fullTexts = ['創新網站解決方案', '客製化網站開發'];
+const fullTexts = ['Web Developer', 'Graphic Designer'];
 
 const Home = React.forwardRef((props, ref) => {
   const [text, setText] = useState('');
@@ -32,7 +30,7 @@ const Home = React.forwardRef((props, ref) => {
           setIsDeleting(false);
           setCurrentIndex((prevIndex) => (prevIndex + 1) % fullTexts.length);
         }
-      }, 200);
+      }, 80);
     } else {
       const currentText = fullTexts[currentIndex];
       const nextCharIndex = text.length + 1;
@@ -44,7 +42,7 @@ const Home = React.forwardRef((props, ref) => {
           if (nextCharIndex === currentText.length) {
             setIsDeleting(true);
           }
-        }, 300);
+        }, 150);
       }
     }
 
@@ -74,14 +72,15 @@ const Home = React.forwardRef((props, ref) => {
         </div>
         <div>
           <h5 className="text-secondary fw-semibold animate-item">
-            Hello, I'm Tony Ming
+            Hi, I'm Tony Ming
           </h5>
           <h1 className="my-3 animate-item">
             <span className="fw-bold">{text}</span>
             <span>|</span>
           </h1>
-          <p className="text-secondary text-break mx-2 animate-item">
-            我是一位前端工程師， 專長包括網站開發、使用者界面設計和前端技術。
+          <p className="text-secondary text-break animate-item">
+            I'm a Front-end React Developer based In Taiwan, over 2 years of
+            professional experience.
           </p>
           <div className="mt-4 animate-item">
             <ul className="list-unstyled d-flex justify-content-center home-list">
@@ -132,14 +131,14 @@ const Home = React.forwardRef((props, ref) => {
               </li>
             </ul>
           </div>
-          <div className="mt-4 animate-item">
+          {/* <div className="mt-4 animate-item">
             <a
               href={process.env.PUBLIC_URL + '/files/明泓儒.pdf'}
               className="btn btn-outline-dark rounded-pill py-2 px-4 border border-2 border-dark fw-semibold"
               download>
               下載履歷
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

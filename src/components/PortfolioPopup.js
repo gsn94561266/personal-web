@@ -1,7 +1,7 @@
 import ReactPlayer from 'react-player';
 import { RxCrossCircled } from 'react-icons/rx';
 
-const PortfolioPopup = ({ showPopupId, data, setShowPopupId }) => {
+const PortfolioPopup = ({ showPopupId, data, setShowPopupId, setData }) => {
   return (
     <>
       {showPopupId &&
@@ -19,6 +19,7 @@ const PortfolioPopup = ({ showPopupId, data, setShowPopupId }) => {
                       role="button"
                       onClick={() => {
                         setShowPopupId();
+                        setData([]);
                       }}
                     />
                   </div>

@@ -115,6 +115,7 @@ function App() {
           showPopupId={showPopupId}
           data={data}
           setShowPopupId={setShowPopupId}
+          setData={setData}
         />
       )}
 

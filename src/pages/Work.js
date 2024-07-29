@@ -6,7 +6,7 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { useInView } from 'react-intersection-observer';
 import data from '../data/Portfolio.json';
 
-const Portfolio = React.forwardRef(({ setShowPopupId, setData }, ref) => {
+const Work = React.forwardRef(({ setShowPopupId, setData }, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { ref: inViewRef, inView } = useInView({
     triggerOnce: true,
@@ -67,16 +67,14 @@ const Portfolio = React.forwardRef(({ setShowPopupId, setData }, ref) => {
   };
 
   return (
-    <div className="component portfolio-background" ref={ref}>
-      <div className="container my-5 py-5 portfolio-container" ref={inViewRef}>
-        <div className="m-2">
-          <h1 className="fw-bold">MY WORK</h1>
-          <p className="fw-bold fs-5 text-secondary mt-4">
-            探索我在不同領域的創作，透過設計和創意將想法轉化為現實。
-          </p>
+    <div className="work-container" ref={ref}>
+      <div className="container text-white" ref={inViewRef}>
+        <div className="title">
+          <h1 className="cormorant-unicase fw-bold">MY WORK</h1>
         </div>
+
         <div
-          className={`my-5 mx-3 mx-xl-0 d-lg-block d-none slider-item ${
+          className={`d-lg-block d-none py-5 my-5 slider-item ${
             inView ? 'in-view' : ''
           }`}>
           <Slider {...settings}>
@@ -96,7 +94,7 @@ const Portfolio = React.forwardRef(({ setShowPopupId, setData }, ref) => {
             ))}
           </Slider>
         </div>
-        <div className="my-5 mx-3 d-lg-none d-block">
+        <div className="d-lg-none d-block py-5 my-5">
           <Slider {...mobileSettings}>
             {data.map((v, i) => (
               <div className="mb-3 p-1" key={i}>
@@ -119,4 +117,4 @@ const Portfolio = React.forwardRef(({ setShowPopupId, setData }, ref) => {
   );
 });
 
-export default Portfolio;
+export default Work;
